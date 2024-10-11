@@ -30,7 +30,6 @@ public class OrderServiceImpl implements OrderService {
             //Check if stock is available or not in inventory service
 
 
-
             Order order = orderRepository.save(createOrderFromRequest(orderRequest));
             log.info("converted successfully. Entity : {}",order.toString());
             OrderResponse orderResponse = createOrderResponse(order);
